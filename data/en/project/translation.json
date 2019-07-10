@@ -1,0 +1,41 @@
+{
+  "SITE_NAME": "The CloudFormation Checklist",
+  "INDEX_TITLE": "✨ Your best cloud checklist Tool ✨",
+  "URL_WEBSITE": "https://cfnchecklist.com",
+  "SITE_TAGLINE": "🗂 The CloudFormation Checklist Application is perfect for meticulous AWS DevOps engineers!",
+  "SITE_DESCRIPTION": "🗂 The CloudFormation Checklist Application is perfect for meticulous AWS DevOps engineers! Follow the rules and deliver the best of your work in a generated report!",
+  "SITE_LANGUAGE": "en",
+  "SITE_DIRECTION": "ltr",
+  "URL_GITHUB_ROOT": "https://github.com/jeshan/cloudformation-checklist",
+  "URL_GITHUB_REPO": "https://github.com/jeshan/cloudformation-checklist/tree/gh-pages",
+  "HIGH_CHECKED": "✓ high priority",
+  "MEDIUM_CHECKED": "✓ medium priority",
+  "LOW_CHECKED": "✓ low priority",
+  "PERCENTAGE_CHECKED": "items are ✓",
+  "SECTION_DOCUMENTATION": "Documentation",
+  "SECTION_TOOL": "Tools",
+  "SECTION_VIDEO": "Videos",
+  "SECTION_TAG": "Filter by tags",
+  "alert": {
+    "JAVASCRIPT_DESACTIVATE": "Your JavaScript seems to be deactivated. Please enable your JavaScript to use all features of the CloudFormation Checklist."
+  },
+  "form": {
+    "LABEL_PROJECT_NAME": "Project Name",
+    "TITLE_PROJECT_NAME": "Type the name of your project",
+    "LABEL_PAGE_TITLE": "Page title or URL",
+    "TITLE_PAGE_TITLE": "Type the name of your page or URL",
+    "LABEL_DEVELOPER_NAME": "Developer's name or team",
+    "TITLE_DEVELOPER_NAME": "Type your name or the name of your team",
+    "LABEL_SEARCH": "Search",
+    "BUTTON_START_NEW": "Start new checklist",
+    "BUTTON_GENERATE_PRINT": "Generate report"
+  },
+  "social": {
+    "TWEET": "Tweet",
+    "TWITTER_MSG": "Check the ✨ CloudFormation Checklist Application ✨ for meticulous AWS DevOps engineers! Use it on your daily workflow and generate reports 📑!",
+    "TWITTER_VIA": "jeshan25",
+    "TWITTER_HASHTAGS": "cloudformation",
+    "STAR": "Star",
+    "GITHUB_STAR_MSG": "Star jeshan/cloudformation-checklist on GitHub"
+  }
+}

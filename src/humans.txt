@@ -1,0 +1,14 @@
+# humanstxt.org/
+# The humans responsible & technology colophon
+
+# TEAM
+
+    Jeshan G. BABOOA -- Cloudformation Nerd -- @jeshan25
+
+# THANKS
+
+    <name>
+
+# TECHNOLOGY COLOPHON
+
+    CSS3, HTML5, Pug, Git, ES6, Webpack, Gulp, Modernizr, Normalize.css
