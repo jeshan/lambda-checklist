@@ -10,6 +10,7 @@ dist/
 .tmp/
 
 # Editor directories and files
+*.iml
 .idea
 .vscode
 *.suo
