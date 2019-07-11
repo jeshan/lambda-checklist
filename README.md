@@ -9,6 +9,11 @@
   <a href="#how-to-use">How To Use</a> • <a href="#contributing">Contributing</a>
 </p>
 <p align="center">
+    <span>Sister project: CloudFormation Checklist</span>
+    <br>
+  <a href="https://github.com/jeshan/cloudformation-checklist">🎮 CloudFormation Checklist</a>
+</p>
+<p align="center">
     <span>Inspired by the Front-end Checklist</span>
     <br>
   <a href="https://github.com/thedaviddias/Front-End-Checklist#---------front-end-checklist-">🎮 Front-End Checklist</a>
