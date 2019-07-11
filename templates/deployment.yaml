@@ -45,6 +45,8 @@ Resources:
             pre_build:
               commands:
                 - pip3 install sceptre
+                - aws configure set profile.jeshanco.region ${AWS::Region}
+                - aws configure set profile.jeshanco.credential_source EcsContainer
             build:
               commands:
                 - docker-compose build
