@@ -1,7 +1,7 @@
 {
     "short_name": "CFN Checklist",
-    "name": "CloudFormation Checklist",
-    "start_url": "http://cfnchecklist.com/?utm_source=homescreen",
+    "name": "Lambda Checklist",
+    "start_url": "http://lambdachecklist.com/?utm_source=homescreen",
     "icons": [
       {
         "src": "/android-chrome-192x192.png",

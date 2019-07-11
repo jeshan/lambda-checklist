@@ -1,4 +1,4 @@
-# CloudFormation Checklist App
+# Lambda Checklist App
 
 ## Table of Contents
 
@@ -29,7 +29,7 @@ To install and run, open a terminal and use the following commands:
 Original checklist application author:
 **[David Dias](https://github.com/thedaviddias)**
 
-Modified for AWS CloudFormation:
+Modified for AWS Lambda:
 **[Jeshan G. BABOOA](https://github.com/jeshan)**
 
 ## Contribute

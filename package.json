@@ -1,7 +1,7 @@
 {
-  "name": "cloudformation-checklist",
+  "name": "lambda-checklist",
   "version": "0.0.1",
-  "description": "The checklist for meticulous AWS DevOps engineers",
+  "description": "The checklist for meticulous serverless engineers",
   "scripts": {
     "start": "gulp dev",
     "build": "gulp build",
@@ -10,14 +10,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://jeshan@github.com/jeshan/cloudformation-checklist.git"
+    "url": "git+https://jeshan@github.com/jeshan/lambda-checklist.git"
   },
   "author": "Jeshan G. Babooa (j@jeshan.co)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/jeshan/cloudformation-checklist/issues"
+    "url": "https://github.com/jeshan/lambda-checklist/issues"
   },
-  "homepage": "https://github.com/jeshan/cloudformation-checklist#readme",
+  "homepage": "https://github.com/jeshan/lambda-checklist#readme",
   "devDependencies": {
     "babel-cli": "^6.26.0",
     "babel-eslint": "^9.0.0",

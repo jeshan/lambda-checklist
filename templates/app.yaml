@@ -1,5 +1,5 @@
 AWSTemplateFormatVersion: '2010-09-09'
-Description: 'Deploys this website at cfnchecklist.com'
+Description: 'Deploys this website at lambdachecklist.com'
 
 Parameters:
   DomainName:

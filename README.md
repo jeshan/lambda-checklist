@@ -1,9 +1,9 @@
 <h1 align="center">
 <br>
-  CloudFormation Checklist
+  Lambda Checklist
 </h1>
 
-<h4 align="center">The CloudFormation Checklist is a list of all elements you need to have / to test before launching your infra to production.</h4>
+<h4 align="center">The Lambda Checklist is a list of all elements you need to have / to test before launching your infra to production.</h4>
 
 <p align="center">
   <a href="#how-to-use">How To Use</a> • <a href="#contributing">Contributing</a>
@@ -17,13 +17,13 @@
 
 ## Table of Contents
 
-See https://cfnchecklist.com
+See https://lambdachecklist.com
 
 ---
 
 ## How to use?
 
-All items in the **CloudFormation Checklist** are required for the majority of the projects, but some elements can be omitted or are not essential (in the case of an administration web app, you may not need RSS feed for example). We choose to use 3 levels of flexibility:
+All items in the **Lambda Checklist** are required for the majority of the projects, but some elements can be omitted or are not essential (in the case of an administration web app, you may not need RSS feed for example). We choose to use 3 levels of flexibility:
 
 * ![Low][low_img] means that the item is **recommended** but can be omitted in some particular situations.
 * ![Medium][medium_img] means that the item is **highly recommended** and can eventually be omitted in some really particular cases. Omitting these that engineers may not work at full speed.
@@ -35,16 +35,16 @@ Some resources possess an emoticon to help you understand which type of content 
 * 🛠: online tool / testing tool
 * 📹: media or video content
 
-> You can contribute to the ***CloudFormation Checklist App*** reading the [README_APP file](https://github.com/jeshan/cloudformation-checklist/blob/master/README_APP.md) which explains everything about the project.
+> You can contribute to the ***Lambda Checklist App*** reading the [README_APP file](https://github.com/jeshan/lambda-checklist/blob/master/README_APP.md) which explains everything about the project.
 
-## CloudFormation Checklist Badge
+## Lambda Checklist Badge
 
-If you want to show you are following the rules of the CloudFormation Checklist, put this badge on your README file!
+If you want to show you are following the rules of the Lambda Checklist, put this badge on your README file!
 
-➔ [![CloudFormation_Checklist followed](https://img.shields.io/badge/CloudFormation_Checklist-followed-brightgreen.svg)](https://github.com/jeshan/cloudformation-checklist/)
+➔ [![Lambda_Checklist followed](https://img.shields.io/badge/Lambda_Checklist-followed-brightgreen.svg)](https://github.com/jeshan/lambda-checklist/)
 
 ```md
-[![Lambda_Checklist followed](https://img.shields.io/badge/Front‑End_Checklist-followed-brightgreen.svg)](https://github.com/jeshan/cloudformation-checklist/)
+[![Lambda_Checklist followed](https://img.shields.io/badge/Front‑End_Checklist-followed-brightgreen.svg)](https://github.com/jeshan/lambda-checklist/)
 ```
 
 ## Contributing
@@ -56,7 +56,7 @@ If you want to show you are following the rules of the CloudFormation Checklist,
 Original checklist application author:
 **[David Dias](https://github.com/thedaviddias)**
 
-Modified for AWS CloudFormation:
+Modified for AWS Lambda:
 **[Jeshan G. BABOOA](https://github.com/jeshan)**
 
 ## License

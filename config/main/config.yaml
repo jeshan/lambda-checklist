@@ -1,5 +1,5 @@
-project_code: cloudformation-checklist
+project_code: lambda-checklist
 
-domain_name: cfnchecklist.com
+domain_name: lambdachecklist.com
 region: us-east-1
 profile: jeshanco

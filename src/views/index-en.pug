@@ -12,11 +12,6 @@ block main
     if _items !== undefined
 
       +checklist-section({
-        dataSection: _items.before,
-        sectionTitle: "Before"
-      })
-
-      +checklist-section({
         dataSection: _items.authoring,
         sectionTitle: "Authoring"
       })
@@ -27,13 +22,18 @@ block main
       })
 
       +checklist-section({
-        dataSection: _items.best_practices,
-        sectionTitle: "Practices"
+        dataSection: _items.management,
+        sectionTitle: "Management"
       })
 
       +checklist-section({
-        dataSection: _items.management,
-        sectionTitle: "Management"
+        dataSection: _items.monitoring,
+        sectionTitle: "Monitoring"
+      })
+
+      +checklist-section({
+        dataSection: _items.cost_control,
+        sectionTitle: "Cost"
       })
 
       +checklist-section({
@@ -44,6 +44,11 @@ block main
       +checklist-section({
         dataSection: _items.testing,
         sectionTitle: "Testing"
+      })
+
+      +checklist-section({
+        dataSection: _items.vpc,
+        sectionTitle: "VPC"
       })
 
   include components/s-section-bottom
