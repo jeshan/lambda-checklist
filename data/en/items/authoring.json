@@ -5,20 +5,16 @@
     "description": "Install these to work faster locally",
     "tools": [
       {
+        "title": "Typeformation plugin for JetBrains IDEs (snippets for serverless and general CloudFormation)",
+        "url": "https://plugins.jetbrains.com/plugin/10653-typeformation"
+      },
+      {
         "title": "AWS CloudFormation plugin for JetBrains IDEs",
         "url": "https://plugins.jetbrains.com/plugin/7371-aws-cloudformation"
       },
       {
         "title": "CloudFormation support for Visual Studio Code",
         "url": "https://marketplace.visualstudio.com/items?itemName=aws-scripting-guy.cform"
-      },
-      {
-        "title": "Cloudformation YAML Snippets for VS Code",
-        "url": "https://marketplace.visualstudio.com/items?itemName=dsteenman.cloudformation-yaml-snippets"
-      },
-      {
-        "title": "Snippets for other IDEs",
-        "url": "https://github.com/search?q=cloudformation+snippets"
       },
       {
         "title": "cfn-python-lint IDE plugins",
@@ -33,153 +29,130 @@
     ]
   },
   {
-    "title": "Prefer YAML over JSON",
-    "priority": "Low",
-    "description": "less verbosity, supports comments",
-    "tools": [
+    "title": "Assume function statelessness",
+    "priority": "Medium",
+    "description": "Lambda environments may be cleaned up or get executed in new containers without notice",
+    "documentation": [
       {
-        "title": "Use aws-cfn-template-flip to migrate to YAML",
-        "url": "https://github.com/awslabs/aws-cfn-template-flip"
+        "title": "FAQs (Why must AWS Lambda functions be stateless?)",
+        "url": "https://aws.amazon.com/lambda/faqs/"
       }
     ],
     "tags": [
       "all",
-      "template",
+      "medium"
+    ]
+  },
+  {
+    "title": "Compile native code in Lambda-like environments",
+    "priority": "Low",
+    "description": "Compile code against an environment as close to the real deal as possible to ensure packages will work properly in Lambda",
+    "tools": [
+      {
+        "title": "Docker images and test runners that replicate the live AWS Lambda environment",
+        "url": "https://github.com/lambci/docker-lambda"
+      }
+    ],
+    "tags": [
+      "all",
+      "docker",
       "low"
     ]
   },
   {
-    "title": "Reuse snippets",
+    "title": "Separate the Lambda handler from your core logic",
     "priority": "Medium",
-    "description": "Reduce the guesswork; CloudFormation snippets available from AWS and on Github",
+    "description": "Increase testability; separate Lambda-specific code to code that can run anywhere, hence testable",
     "documentation": [
       {
-        "title": "Template Snippets",
-        "url": "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/CHAP_TemplateQuickRef.html?shortFooter=true"
-      },
-      {
-        "title": "Cloudformation samples/snippets",
-        "url": "https://github.com/search?q=cloudformation+samples"
+        "title": "Reference",
+        "url": "https://docs.aws.amazon.com/lambda/latest/dg/best-practices.html?shortFooter=true#function-code"
       }
     ],
     "tags": [
       "all",
       "authoring",
-      "reuse",
       "medium"
     ]
   },
   {
-    "title": "Organise Your Stacks By Lifecycle and Ownership",
-    "priority": "High",
-    "description": "Putting all resources in too few stacks can become cumbersome",
-    "documentation": [
-      {
-        "title": "Explanation",
-        "url": "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/best-practices.html?shortFooter=true#organizingstacks"
-      }
-    ],
-    "tags": [
-      "all",
-      "template",
-      "team",
-      "high"
-    ]
-  },
-  {
-    "title": "Use Cross-Stack References to Export Shared Resources",
-    "priority": "Low",
-    "description": "Decrease overhead to get a stack running",
-    "documentation": [
-      {
-        "title": "Explanation",
-        "url": "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/best-practices.html?shortFooter=true#cross-stack"
-      }
-    ],
-    "tags": [
-      "all",
-      "template",
-      "low"
-    ]
-  },
-  {
-    "title": "Make templates reusable",
+    "title": "Reuse the execution context for performance",
     "priority": "Medium",
-    "description": "Reuse Templates to Replicate Stacks in Multiple Environments",
+    "description": "If function initialisation is costly, reuse the context by caching resources for subsequent invocations",
     "documentation": [
       {
-        "title": "Explanation",
-        "url": "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/best-practices.html?shortFooter=true#reuse"
+        "title": "Reference",
+        "url": "https://docs.aws.amazon.com/lambda/latest/dg/best-practices.html?shortFooter=true#function-code"
       }
     ],
     "tags": [
       "all",
-      "template",
-      "reuse",
+      "authoring",
       "medium"
     ]
   },
   {
-    "title": "Use AWS-Specific Parameter Types",
+    "title": "Use env vars to pass operational parameters to your function",
     "priority": "Low",
-    "description": "For basic validation and some variable lookups",
+    "description": "Don't hardcode things like queue names or table names even if they are the same across your accounts. This makes the reader understand dependencies easier",
     "documentation": [
       {
-        "title": "Explanation",
-        "url": "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/best-practices.html?shortFooter=true#parmtypes"
+        "title": "Reference",
+        "url": "https://docs.aws.amazon.com/lambda/latest/dg/best-practices.html?shortFooter=true#function-code"
       }
     ],
     "tags": [
       "all",
-      "template",
+      "authoring",
       "low"
     ]
   },
   {
-    "title": "Use Parameter Constraints",
+    "title": "Put all dependencies in layers",
     "priority": "Low",
-    "description": "So as to clarify what inputs the user should be entering",
+    "description": "Lambda layers keep deployment packages small; allowing faster deployments",
     "documentation": [
       {
-        "title": "Explanation",
-        "url": "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/best-practices.html?shortFooter=true#parmconstraints"
+        "title": "Reference",
+        "url": "https://docs.aws.amazon.com/lambda/latest/dg/configuration-layers.html"
       }
     ],
     "tags": [
       "all",
-      "template",
+      "authoring",
       "low"
     ]
   },
   {
-    "title": "Use AWS::CloudFormation::Init to Deploy Software Applications on Amazon EC2 Instances",
-    "priority": "Medium",
-    "description": "To make it declarative instead of procedural",
+    "title": "Keep application code under 3 MB",
+    "priority": "Low",
+    "description": "Keep your packages small; allows for editing code in the embedded Cloud9 editor for experimentation; move all dependencies in layers",
     "documentation": [
       {
-        "title": "Explanation",
-        "url": "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/best-practices.html?shortFooter=true#cfninit"
+        "title": "Lambda limits (see deployment package size section)",
+        "url": "https://docs.aws.amazon.com/lambda/latest/dg/limits.html?shortFooter=true"
       }
     ],
     "tags": [
       "all",
-      "template",
-      "ec2",
-      "medium"
+      "authoring",
+      "low"
     ]
   },
   {
     "title": "Experiment with the console first, then generate the templates/snippets",
     "priority": "Medium",
-    "description": "To reduce the guesswork on how to get the resource definitions right, have a tool generate it accurately",
+    "description": "The Lambda designer helps you do things right and the Cloud9 IDE is great for prototyping. When done experimenting, generate the CloudFormation equivalent accurately to automate further deployments",
     "tools": [
       {
-        "title": "AWS Console Recorder (Records actions made in the AWS Management Console and outputs the equivalent CLI/SDK commands and CloudFormation/Terraform templates in your browser)",
-        "url": "https://github.com/iann0036/AWSConsoleRecorder"
-      },
-      {
         "title": "Former2 (Generate CloudFormation / Terraform / Troposphere templates from your existing AWS resources in your browser)",
-        "url": "https://former2.com"
+        "url": "https://former2.com/#section-compute-lambda"
+      }
+    ],
+    "documentation": [
+      {
+        "title": "Create a Lambda Function with the Console",
+        "url": "https://docs.aws.amazon.com/lambda/latest/dg/getting-started-create-function.html"
       }
     ],
     "tags": [
@@ -189,51 +162,33 @@
     ]
   },
   {
-    "title": "Check resource lifecycle policies",
-    "priority": "High",
-    "description": "Be aware if/when your resources will get replaced by CFN to avoid surprises",
-    "documentation": [
-      {
-        "title": "AWS Resource and Property Types Reference",
-        "url": "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-template-resource-type-ref.html?shortFooter=true"
-      }
-    ],
-    "tags": [
-      "all",
-      "docs",
-      "high"
-    ]
-  },
-  {
-    "title": "Use custom resources to automate more of your infra",
-    "priority": "Low",
-    "description": "because AWS may not cover everything under CFN yet",
-    "documentation": [
-      {
-        "title": "Docs",
-        "url": "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/template-custom-resources.html?shortFooter=true"
-      }
-    ],
-    "tags": [
-      "all",
-      "template",
-      "low"
-    ]
-  },
-  {
-    "title": "Use macros",
+    "title": "Follow the CloudFormation checklist",
     "priority": "Medium",
-    "description": "to reduce duplication, custom lookups, or any arbitrary code to transform template, etc",
-    "documentation": [
+    "description": "A lot of its best practices apply for AWS Lambda as well",
+    "tools": [
       {
-        "title": "Docs",
-        "url": "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/template-macros.html?shortFooter=true"
+        "title": "CloudFormation Checklist (sister project)",
+        "url": "https://cfnchecklist.com"
       }
     ],
     "tags": [
       "all",
-      "template",
       "medium"
+    ]
+  },
+  {
+    "title": "Decide on tagging strategy",
+    "priority": "Low",
+    "description": "Tags are useful to organise functions and help understand bills better. Some sensible tags already applied when deploying via CloudFormation",
+    "documentation": [
+      {
+        "title": "Tagging Lambda Functions",
+        "url": "https://docs.aws.amazon.com/lambda/latest/dg/tagging.html"
+      }
+    ],
+    "tags": [
+      "all",
+      "low"
     ]
   }
 ]

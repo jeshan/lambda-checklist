@@ -1,0 +1,99 @@
+[
+  {
+    "title": "Install Sentry error monitoring tool",
+    "priority": "Medium",
+    "description": "Versatile OSS tool that alerts you on runtime exceptions in your code",
+    "tools": [
+      {
+        "title": "AWS Lambda error tracking with Sentry",
+        "url": "https://sentry.io/for/pythonawslambda/"
+      },
+      {
+        "title": "Sentry plugin for sls",
+        "url": "https://github.com/arabold/serverless-sentry-plugin"
+      }
+    ],
+    "documentation": [
+      {
+        "title": "AWS Lambda (Sentry docs)",
+        "url": "https://docs.sentry.io/platforms/python/aws_lambda/"
+      }
+    ],
+    "tags": [
+      "all",
+      "monitoring",
+      "medium"
+    ]
+  },
+  {
+    "title": "Monitor for throttles",
+    "priority": "Medium",
+    "description": "Detect if throttles happening and set an alarm to investigate",
+    "tools": [
+      {
+        "title": "Throttle graph",
+        "url": "https://console.aws.amazon.com/cloudwatch/home#metricsV2:graph=~(metrics~(~(~'AWS*2fLambda~'Throttles~(stat~'Sum)))~region~'us-east-1~start~'-PT3H~end~'P0D)"
+      }
+    ],
+    "documentation": [
+      {
+        "title": "Managing concurrency",
+        "url": "https://docs.aws.amazon.com/lambda/latest/dg/concurrent-executions.html"
+      },
+      {
+        "title": "Monitoring AWS Lambda Functions With CloudWatch",
+        "url": "https://dev.to/frosnerd/monitoring-aws-lambda-functions-with-cloudwatch-1nap"
+      }
+    ],
+    "tags": [
+      "all",
+      "monitoring",
+      "medium"
+    ]
+  },
+  {
+    "title": "Monitor for concurrent executions",
+    "priority": "Medium",
+    "description": "If concurrent executions reaching too high in your accounts, your functions will get throttled",
+    "tools": [
+      {
+        "title": "Concurrent executions graph",
+        "url": "https://console.aws.amazon.com/cloudwatch/home#metricsV2:graph=~(metrics~(~(~'AWS*2fLambda~'ConcurrentExecutions~(stat~'Maximum)))~region~'us-east-1~start~'-PT3H~end~'P0D)"
+      }
+    ],
+    "documentation": [
+      {
+        "title": "Managing concurrency",
+        "url": "https://docs.aws.amazon.com/lambda/latest/dg/concurrent-executions.html"
+      },
+      {
+        "title": "Monitoring AWS Lambda Functions With CloudWatch",
+        "url": "https://dev.to/frosnerd/monitoring-aws-lambda-functions-with-cloudwatch-1nap"
+      }
+    ],
+    "tags": [
+      "all",
+      "monitoring",
+      "medium"
+    ]
+  },
+  {
+    "title": "Setup AWS X-Ray",
+    "priority": "Low",
+    "description": "Gain insights on how functions are performing, alongside other AWS services with X-Ray.",
+    "documentation": [
+      {
+        "title": "Using AWS X-Ray (with Lambda)",
+        "url": "https://docs.aws.amazon.com/lambda/latest/dg/lambda-x-ray.html"
+      },
+      {
+        "title": "What is AWS X-Ray?",
+        "url": "https://docs.aws.amazon.com/xray/latest/devguide/aws-xray.html"
+      }
+    ],
+    "tags": [
+      "all",
+      "low"
+    ]
+  }
+]

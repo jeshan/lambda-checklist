@@ -1,0 +1,36 @@
+[
+  {
+    "title": "Deploy in VPCs only if needed",
+    "priority": "Medium",
+    "description": "Cold starts will be much more severe in VPCs",
+    "documentation": [
+      {
+        "title": "Configuring a Lambda Function to Access Resources in an Amazon VPC (incl. considerations for VPC)",
+        "url": "https://docs.aws.amazon.com/lambda/latest/dg/vpc.html"
+      },
+      {
+        "title": "Services like Amazon Elasticsearch Service can be secured over IAM with access policies, so exposing the endpoint publicly is safe...",
+        "url": "https://docs.aws.amazon.com/lambda/latest/dg/best-practices.html?shortFooter=true#lambda-vpc"
+      }
+    ],
+    "tags": [
+      "all",
+      "medium"
+    ]
+  },
+  {
+    "title": "Use big subnets",
+    "priority": "Medium",
+    "description": "Be prepared to have enough private IPs available",
+    "documentation": [
+      {
+        "title": "Should you use a VPC?",
+        "url": "https://docs.aws.amazon.com/lambda/latest/dg/best-practices.html?shortFooter=true#lambda-vpc"
+      }
+    ],
+    "tags": [
+      "all",
+      "medium"
+    ]
+  }
+]

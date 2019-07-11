@@ -1,28 +1,12 @@
 [
   {
-    "title": "Use Code Reviews and Revision Controls to Manage Your Templates\n",
-    "priority": "High",
-    "description": "Share and ask feedback from your team",
-    "documentation": [
-      {
-        "title": "Explanation",
-        "url": "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/best-practices.html?shortFooter=true#code"
-      }
-    ],
-    "tags": [
-      "all",
-      "team",
-      "high"
-    ]
-  },
-  {
     "title": "Share this checklist",
     "priority": "Medium",
     "description": "Ask each team member to always have this template open",
     "tools": [
       {
-        "title": "CloudFormation checklist",
-        "url": "https://cfnchecklist.com"
+        "title": "Lambda checklist",
+        "url": "https://lambdachecklist.com"
       }
     ],
     "tags": [

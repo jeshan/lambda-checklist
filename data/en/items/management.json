@@ -1,104 +1,190 @@
 [
   {
-    "title": "Manage All Stack Resources Through AWS CloudFormation",
-    "priority": "High",
-    "description": "Doing so can create a mismatch between your stack's template and the current state of your stack resources, which can cause errors if you update or delete the stack",
+    "title": "Set a DLQ on all async functions",
+    "priority": "Low",
+    "description": "Inputs that caused your function to fail can be placed in a Dead-Letter Queue (asynchronous calls only)",
     "documentation": [
       {
-        "title": "Reference",
-        "url": "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/best-practices.html?shortFooter=true#donttouch"
+        "title": "Robust Serverless Application Design with AWS Lambda Dead Letter Queues",
+        "url": "https://aws.amazon.com/blogs/compute/robust-serverless-application-design-with-aws-lambda-dlq/"
+      },
+      {
+        "title": "SQS vs SNS for Lambda Dead Letter Queues",
+        "url": "https://picnicerror.net/development/aws/sqs-vs-sns-for-lambda-dead-letter-queues-2018-03-02/"
       }
     ],
     "tags": [
       "all",
       "management",
+      "low"
+    ]
+  },
+  {
+    "title": "Alert on DLQs",
+    "priority": "Low",
+    "description": "Set a CloudWatch alarm when messages are present in your Dead Letter Queue",
+    "documentation": [
+      {
+        "title": "What are the Benefits of Dead-Letter Queues?",
+        "url": "https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/sqs-dead-letter-queues.html?shortFooter=true#sqs-dead-letter-queues-benefits"
+      },
+      {
+        "title": "How to Monitor Amazon SQS with CloudWatch",
+        "url": "https://www.bluematador.com/blog/how-to-monitor-amazon-sqs-with-cloudwatch"
+      }
+    ],
+    "tags": [
+      "all",
+      "management",
+      "low"
+    ]
+  },
+  {
+    "title": "Right-size your functions",
+    "priority": "Low",
+    "description": "Strike a balance between cost and performance by automatically testing functions at varying memory levels",
+    "documentation": [
+      {
+        "title": "Function Configuration best practices",
+        "url": "https://docs.aws.amazon.com/lambda/latest/dg/best-practices.html?shortFooter=true#function-configuration"
+      }
+    ],
+    "tools": [
+      {
+        "title": "Step Functions state machine generator for AWS Lambda Power Tuning",
+        "url": "https://github.com/alexcasalboni/aws-lambda-power-tuning"
+      }
+    ],
+    "tags": [
+      "all",
+      "management",
+      "low"
+    ]
+  },
+  {
+    "title": "Use SNS for async invocation",
+    "priority": "Low",
+    "description": "Use SNS topics as middleware between functions to decouple them",
+    "documentation": [
+      {
+        "title": "Tutorial: Using AWS Lambda with Amazon Simple Notification Service",
+        "url": "https://docs.aws.amazon.com/lambda/latest/dg/with-sns-example.html?shortFooter=true"
+      }
+    ],
+    "tags": [
+      "all",
+      "management",
+      "low"
+    ]
+  },
+  {
+    "title": "Deploy safely using traffic shifting",
+    "priority": "Low",
+    "description": "Slowly make new versions of functions available to users to avoid instabilities in new code",
+    "documentation": [
+      {
+        "title": "Traffic Shifting Using Aliases",
+        "url": "https://docs.aws.amazon.com/lambda/latest/dg/lambda-traffic-shifting-using-aliases.html?shortFooter=true"
+      },
+      {
+        "title": "Safely Deploy AWS Lambdas with CloudFormation",
+        "url": "https://medium.com/nikeengineering/safely-deploy-aws-lambdas-with-cloudformation-d0ee829d8351"
+      }
+    ],
+    "tags": [
+      "all",
+      "management",
+      "low"
+    ]
+  },
+  {
+    "title": "Manage database connections properly",
+    "priority": "Medium",
+    "description": "Persistent connections don't lend themselves well to the serverless paradigm",
+    "documentation": [
+      {
+        "title": "How To: Manage RDS Connections from AWS Lambda Serverless Functions",
+        "url": "https://www.jeremydaly.com/manage-rds-connections-aws-lambda/"
+      }
+    ],
+    "tools": [
+      {
+        "title": "A module for managing MySQL connections at SERVERLESS scale",
+        "url": "https://github.com/jeremydaly/serverless-mysql"
+      }
+    ],
+    "tags": [
+      "all",
+      "databases",
+      "medium"
+    ]
+  },
+  {
+    "title": "Deploy via CloudFormation",
+    "priority": "High",
+    "description": "or frameworks based on it. Helps coordinate deployments, handles the grunt work, helps follow good practices, etc",
+    "documentation": [
+      {
+        "title": "List of frameworks",
+        "url": "https://github.com/anaibol/awesome-serverless#frameworks"
+      }
+    ],
+    "tags": [
+      "all",
       "high"
     ]
   },
   {
-    "title": "Create Change Sets Before Updating Your Stacks",
+    "title": "Coordinate functions with AWS Step Functions",
     "priority": "Low",
-    "description": "See how proposed changes might impact your resources to avoid accidents",
+    "description": "Maintain function independence by making them interact in a state machine. Also useful for long-running serverless applications",
     "documentation": [
       {
-        "title": "Explanation",
-        "url": "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/best-practices.html?shortFooter=true#cfn-best-practices-changesets"
-      }
-    ],
-    "tags": [
-      "all",
-      "management",
-      "low"
-    ]
-  },
-  {
-    "title": "Use Stack Policies",
-    "priority": "Medium",
-    "description": "protect critical stack resources from unintentional updates",
-    "documentation": [
-      {
-        "title": "Explanation",
-        "url": "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/best-practices.html?shortFooter=true#stackpolicy"
-      }
-    ],
-    "tags": [
-      "all",
-      "management",
-      "medium"
-    ]
-  },
-  {
-    "title": "Use AWS CloudTrail to Log AWS CloudFormation Calls",
-    "priority": "Low",
-    "description": "To track api calls for auditing",
-    "documentation": [
-      {
-        "title": "Explanation",
-        "url": "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/best-practices.html?shortFooter=true#cloudtrail"
-      }
-    ],
-    "tags": [
-      "all",
-      "management",
-      "low"
-    ]
-  },
-  {
-    "title": "Use a CFN launcher like Sceptre",
-    "priority": "Medium",
-    "description": "Helps manage templates at scale with your multiple accounts and regions. Check docs for more useful features",
-    "documentation": [
-      {
-        "title": "Sceptre docs",
-        "url": "https://sceptre.cloudreach.com/latest/index.html"
-      }
-    ],
-    "tags": [
-      "all",
-      "tools",
-      "management",
-      "medium"
-    ]
-  },
-  {
-    "title": "Automate drift detection",
-    "priority": "Low",
-    "description": "Important to catch unmanaged changes made outside of CloudFormation",
-    "documentation": [
-      {
-        "title": "Detecting Unmanaged Configuration Changes to Stacks and Resources",
-        "url": "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-stack-drift.html?shortFooter=true"
+        "title": "Creating a Lambda State Machine",
+        "url": "https://docs.aws.amazon.com/step-functions/latest/dg/tutorial-creating-lambda-state-machine.html"
       },
       {
-        "title": "Automate drift detection with AWS Config",
-        "url": "https://docs.aws.amazon.com/config/latest/developerguide/cloudformation-stack-drift-detection-check.html?shortFooter=true"
+        "title": "What is Step Functions?",
+        "url": "https://docs.aws.amazon.com/step-functions/latest/dg/welcome.html"
       }
     ],
     "tags": [
       "all",
-      "management",
-      "automation",
-      "low"
+      "medium"
+    ]
+  },
+  {
+    "title": "Handle errors with Step Functions",
+    "priority": "Low",
+    "description": "Step functions has constructs to handle errors, e.g retries at back off rates, catch specific exceptions, wait before retries, etc",
+    "documentation": [
+      {
+        "title": "Step Functions: Errors",
+        "url": "https://docs.aws.amazon.com/step-functions/latest/dg/amazon-states-language-errors.html"
+      },
+      {
+        "title": "What is Step Functions?",
+        "url": "https://docs.aws.amazon.com/step-functions/latest/dg/welcome.html"
+      }
+    ],
+    "tags": [
+      "all",
+      "medium"
+    ]
+  },
+  {
+    "title": "Use Step Functions for polling",
+    "priority": "Low",
+    "description": "Waiting needlessly in functions will waste money. Step functions has constructs to help with it",
+    "documentation": [
+      {
+        "title": "Poll for Job Status example",
+        "url": "https://docs.aws.amazon.com/step-functions/latest/dg/sample-project-job-poller.html"
+      }
+    ],
+    "tags": [
+      "all",
+      "medium"
     ]
   }
 ]

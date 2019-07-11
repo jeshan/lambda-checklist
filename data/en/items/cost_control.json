@@ -1,0 +1,48 @@
+[
+  {
+    "title": "Test functions at different memory levels",
+    "priority": "Low",
+    "description": "Strike a balance between cost and performance by automatically testing functions at varying memory levels",
+    "documentation": [
+      {
+        "title": "Function Configuration best practices",
+        "url": "https://docs.aws.amazon.com/lambda/latest/dg/best-practices.html?shortFooter=true#function-configuration"
+      }
+    ],
+    "tools": [
+      {
+        "title": "Step Functions state machine generator for AWS Lambda Power Tuning",
+        "url": "https://github.com/alexcasalboni/aws-lambda-power-tuning"
+      }
+    ],
+    "tags": [
+      "all",
+      "management",
+      "low"
+    ]
+  },
+  {
+    "title": "SQS integration is expensive",
+    "priority": "Medium",
+    "description": "Lambda polls queues aggressively, looking for messages to send to functions. For low volumes of messages, this will get costly. Use SNS or Step Functions instead",
+    "documentation": [
+      {
+        "title": "Using AWS Lambda with Amazon SQS",
+        "url": "https://docs.aws.amazon.com/lambda/latest/dg/with-sqs.html"
+      },
+      {
+        "title": "Using AWS Lambda with Amazon SNS",
+        "url": "https://docs.aws.amazon.com/lambda/latest/dg/with-sns.html?shortFooter=true"
+      },
+      {
+        "title": "Poll for Job Status example",
+        "url": "https://docs.aws.amazon.com/step-functions/latest/dg/sample-project-job-poller.html"
+      }
+    ],
+    "tags": [
+      "all",
+      "cost control",
+      "medium"
+    ]
+  }
+]

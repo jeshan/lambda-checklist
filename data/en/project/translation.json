@@ -1,13 +1,13 @@
 {
-  "SITE_NAME": "The CloudFormation Checklist",
+  "SITE_NAME": "The Lambda Checklist",
   "INDEX_TITLE": "✨ Your best cloud checklist Tool ✨",
-  "URL_WEBSITE": "https://cfnchecklist.com",
-  "SITE_TAGLINE": "🗂 The CloudFormation Checklist Application is perfect for meticulous AWS DevOps engineers!",
-  "SITE_DESCRIPTION": "🗂 The CloudFormation Checklist Application is perfect for meticulous AWS DevOps engineers! Follow the rules and deliver the best of your work in a generated report!",
+  "URL_WEBSITE": "https://lambdachecklist.com",
+  "SITE_TAGLINE": "🗂 The Lambda Checklist Application is perfect for meticulous serverless engineers!",
+  "SITE_DESCRIPTION": "🗂 The Lambda Checklist Application is perfect for meticulous serverless engineers! Follow the rules and deliver the best of your work in a generated report!",
   "SITE_LANGUAGE": "en",
   "SITE_DIRECTION": "ltr",
-  "URL_GITHUB_ROOT": "https://github.com/jeshan/cloudformation-checklist",
-  "URL_GITHUB_REPO": "https://github.com/jeshan/cloudformation-checklist/tree/gh-pages",
+  "URL_GITHUB_ROOT": "https://github.com/jeshan/lambda-checklist",
+  "URL_GITHUB_REPO": "https://github.com/jeshan/lambda-checklist/tree/gh-pages",
   "HIGH_CHECKED": "✓ high priority",
   "MEDIUM_CHECKED": "✓ medium priority",
   "LOW_CHECKED": "✓ low priority",
@@ -17,7 +17,7 @@
   "SECTION_VIDEO": "Videos",
   "SECTION_TAG": "Filter by tags",
   "alert": {
-    "JAVASCRIPT_DESACTIVATE": "Your JavaScript seems to be deactivated. Please enable your JavaScript to use all features of the CloudFormation Checklist."
+    "JAVASCRIPT_DESACTIVATE": "Your JavaScript seems to be deactivated. Please enable your JavaScript to use all features of the Lambda Checklist."
   },
   "form": {
     "LABEL_PROJECT_NAME": "Project Name",
@@ -32,10 +32,10 @@
   },
   "social": {
     "TWEET": "Tweet",
-    "TWITTER_MSG": "Check the ✨ CloudFormation Checklist Application ✨ for meticulous AWS DevOps engineers! Use it on your daily workflow and generate reports 📑!",
+    "TWITTER_MSG": "Check the ✨ Lambda Checklist Application ✨ for meticulous serverless engineers! Use it on your daily workflow and generate reports 📑!",
     "TWITTER_VIA": "jeshan25",
-    "TWITTER_HASHTAGS": "cloudformation",
+    "TWITTER_HASHTAGS": "awslambda, #serverless",
     "STAR": "Star",
-    "GITHUB_STAR_MSG": "Star jeshan/cloudformation-checklist on GitHub"
+    "GITHUB_STAR_MSG": "Star jeshan/lambda-checklist on GitHub"
   }
 }

@@ -2,11 +2,17 @@
   {
     "title": "Restrict IAM permissions",
     "priority": "High",
-    "description": "Grant users only the permissions they need to work with CloudFormation",
+    "description": "Remove risk of attackers getting access to too much data; start with the AWSLambdaBasicExecutionRole policy, then add specific and granular permissions",
     "documentation": [
       {
-        "title": "Use IAM to Control Access",
-        "url": "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/best-practices.html?shortFooter=true#use-iam-to-control-access"
+        "title": "Best Practices (Function Configuration)",
+        "url": "https://docs.aws.amazon.com/lambda/latest/dg/best-practices.html?shortFooter=true#function-configuration"
+      }
+    ],
+    "tools": [
+      {
+        "title": "PureSec CLI that generates least-privileged roles for Node and Python",
+        "url": "https://github.com/puresec/puresec-cli"
       }
     ],
     "tags": [
@@ -18,29 +24,55 @@
     ]
   },
   {
-    "title": "Do not embed credentials",
-    "priority": "High",
-    "description": "Use input parameters instead",
-    "documentation": [
+    "title": "Restrict Lambda environment",
+    "priority": "Medium",
+    "description": "Restrict privileges on the environment as well (e.g write to disk, process execution, etc), not just IAM",
+    "tools": [
       {
-        "title": "Do Not Embed Credentials in Your Templates",
-        "url": "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/best-practices.html?shortFooter=true#creds"
+        "title": "PureSec FunctionShield (free)",
+        "url": "https://www.puresec.io/function-shield"
+      }
+    ],
+    "video": [
+      {
+        "title": "PureSec FunctionShield: Getting Started in 5 Minutes",
+        "url": "https://www.youtube.com/watch?v=jUpTbA0Gwng"
       }
     ],
     "tags": [
       "all",
       "security",
-      "high"
+      "medium"
+    ]
+  },
+  {
+    "title": "Automate checks against SQL injection",
+    "priority": "medium",
+    "description": "This is among the most common attacks in web applications",
+    "documentation": [
+      {
+        "title": "Automated SQL Injection Testing (with SQLMap and lambda-proxy)",
+        "url": "https://www.puresec.io/blog/automated-sql-injection-testing-of-serverless-functions-on-a-shoestring-budget-and-some-good-music"
+      }
+    ],
+    "tags": [
+      "all",
+      "security",
+      "medium"
     ]
   },
   {
     "title": "Statically analyse your templates with cfn_nag",
     "priority": "Medium",
-    "description": "45+ rules to catch potential insecure infra and misconfigurations",
-    "documentation": [
+    "description": "45+ rules to catch potential insecure infra and misconfiguration, incl. a couple for serverless",
+    "tools": [
       {
         "title": "stelligent/cfn_nag",
         "url": "https://github.com/stelligent/cfn_nag"
+      },
+      {
+        "title": "List of rules",
+        "url": "https://github.com/stelligent/cfn_nag/tree/master/lib/cfn-nag/custom_rules"
       }
     ],
     "tags": [
@@ -48,6 +80,22 @@
       "tools",
       "security",
       "medium"
+    ]
+  },
+  {
+    "title": "Encrypt env vars with your own key",
+    "priority": "Low",
+    "description": "Environment variables are always encrypted but consider controlling encryption with your own keys",
+    "documentation": [
+      {
+        "title": "AWS Lambda Environment Variables (see Environment Variable Encryption section)",
+        "url": "https://docs.aws.amazon.com/lambda/latest/dg/env_variables.html?shortFooter=true"
+      }
+    ],
+    "tags": [
+      "all",
+      "security",
+      "low"
     ]
   }
 ]
