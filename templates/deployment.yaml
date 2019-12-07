@@ -11,7 +11,7 @@ Parameters:
     Default: jeshan/lambda-checklist
 
 Resources:
-  DeployCfnChecklist:
+  DeployLambdaChecklist:
     Properties:
       Artifacts:
         Type: NO_ARTIFACTS
@@ -108,5 +108,5 @@ Resources:
                 Effect: Allow
                 Resource: '*'
             Version: '2012-10-17'
-          PolicyName: cfn-checklist-pol
+          PolicyName: lambda-checklist-pol
     Type: AWS::IAM::Role
